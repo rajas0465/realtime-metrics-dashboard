@@ -6,7 +6,7 @@ phases:
       - echo "Setting LD_LIBRARY_PATH for Oracle Instant Client"
       - echo "Verifying LD_LIBRARY_PATH"
       - echo $LD_LIBRARY_PATH
-      - export LD_LIBRARY_PATH=$CODEBUILD_SRC_DIR/instantclient_23_5:$LD_LIBRARY_PATH
+      - export LD_LIBRARY_PATH=$CODEBUILD_SRC_DIR/instantclient_23_5
       - echo "Verifying LD_LIBRARY_PATH"
       - echo $LD_LIBRARY_PATH
       - cd $CODEBUILD_SRC_DIR/API && npm install
