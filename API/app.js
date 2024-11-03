@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 AWS.config.update({ region: 'ap-south-1' });
 const cloudwatch = new AWS.CloudWatch();
 
-oracledb.initOracleClient({ libDir: 'C:\\oracle\\instantclient_23_5' }); // Optional if using Oracle Instant Client
+oracledb.initOracleClient({ libDir: '/opt/oracle/instantclient' }); // Optional if using Oracle Instant Client
 
 // Database connection configuration
 const dbConfig = {
