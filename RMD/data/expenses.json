@@ -1,0 +1,26 @@
+[
+ {
+  "id": "1",
+  "name": "EC2 instance 1",
+  "amount": "955.75",
+  "percentage": "61"
+ },
+ {
+  "id": "2",
+  "name": "RDS instance",
+  "amount": "300.55",
+  "percentage": "19"
+ },
+ {
+  "id": "3",
+  "name": "EC2 instance 2",
+  "amount": "200.95",
+  "percentage": "13"
+ },
+ {
+  "id": "4",
+  "name": "RDS Postresql instance",
+  "amount": "70.95",
+  "percentage": "5"
+ }
+]

@@ -1,0 +1,131 @@
+{
+    "cpu": {
+        "usage": 0.7657912316075016,
+        "details": [
+            {
+                "timestamp": "2024-11-01T17:17:00.000Z",
+                "usage": 0.7657912316075016
+            },
+            {
+                "timestamp": "2024-11-02T12:17:00.000Z",
+                "usage": 0.22152628407372194
+            },
+            {
+                "timestamp": "2024-11-02T11:17:00.000Z",
+                "usage": 0.26470269680214503
+            },
+            {
+                "timestamp": "2024-11-01T19:17:00.000Z",
+                "usage": 0.2583363647025038
+            },
+            {
+                "timestamp": "2024-11-02T09:17:00.000Z",
+                "usage": 0.24389103952131455
+            },
+            {
+                "timestamp": "2024-11-02T08:17:00.000Z",
+                "usage": 0.25910079139138587
+            },
+            {
+                "timestamp": "2024-11-02T10:17:00.000Z",
+                "usage": 0.24751410420499026
+            },
+            {
+                "timestamp": "2024-11-01T18:17:00.000Z",
+                "usage": 0.5083071340390137
+            }
+        ]
+    },
+    "network": {
+        "in": 88189,
+        "out": 115907,
+        "details": [
+            {
+                "timestamp": "2024-11-02T11:17:00.000Z",
+                "in_kbps": 88189,
+                "out_kbps": 115907
+            },
+            {
+                "timestamp": "2024-11-01T17:17:00.000Z",
+                "in_kbps": 9190,
+                "out_kbps": 10131
+            },
+            {
+                "timestamp": "2024-11-01T19:17:00.000Z",
+                "in_kbps": 6623,
+                "out_kbps": 5164
+            },
+            {
+                "timestamp": "2024-11-02T09:17:00.000Z",
+                "in_kbps": 8835,
+                "out_kbps": 10543
+            },
+            {
+                "timestamp": "2024-11-02T10:17:00.000Z",
+                "in_kbps": 17057,
+                "out_kbps": 20283
+            },
+            {
+                "timestamp": "2024-11-02T12:17:00.000Z",
+                "in_kbps": 6460,
+                "out_kbps": 14104
+            },
+            {
+                "timestamp": "2024-11-02T08:17:00.000Z",
+                "in_kbps": 41138,
+                "out_kbps": 57975
+            },
+            {
+                "timestamp": "2024-11-01T18:17:00.000Z",
+                "in_kbps": 84742606,
+                "out_kbps": 451919
+            }
+        ]
+    },
+    "networkPackets": {
+        "total_packets_in": 56778,
+        "total_packets_out": 4676,
+        "details": [
+            {
+                "timestamp": "2024-11-01T18:17:00.000Z",
+                "packets_in": 56778,
+                "packets_out": 4676
+            },
+            {
+                "timestamp": "2024-11-02T08:17:00.000Z",
+                "packets_in": 95,
+                "packets_out": 164
+            },
+            {
+                "timestamp": "2024-11-02T10:17:00.000Z",
+                "packets_in": 108,
+                "packets_out": 172
+            },
+            {
+                "timestamp": "2024-11-02T12:17:00.000Z",
+                "packets_in": 71,
+                "packets_out": 167
+            },
+            {
+                "timestamp": "2024-11-01T17:17:00.000Z",
+                "packets_in": 20,
+                "packets_out": 27
+            },
+            {
+                "timestamp": "2024-11-02T09:17:00.000Z",
+                "packets_in": 48,
+                "packets_out": 98
+            },
+            {
+                "timestamp": "2024-11-01T19:17:00.000Z",
+                "packets_in": 17,
+                "packets_out": 25
+            },
+            {
+                "timestamp": "2024-11-02T11:17:00.000Z",
+                "packets_in": 557,
+                "packets_out": 634
+            }
+        ]
+    }
+}
