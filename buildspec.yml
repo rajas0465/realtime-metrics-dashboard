@@ -8,6 +8,8 @@ phases:
       - cd ../RMD && pwd && npm install
   build:
     commands:
+      - echo "current directory"
+      - pwd
       - echo "Building the API and printing current directory"
       - cd API && pwd && npm run build
       - echo "Building the RMD Expo project and printing current directory"
