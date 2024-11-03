@@ -4,12 +4,6 @@ phases:
     commands:
       - echo "Navigating to API directory and printing current directory"
       - cd API && pwd && npm install
-      - echo "Unzipping Oracle Instant Client from local source"
-      - unzip instantclient-basiclite-windows.zip
-      - echo "installing Oracle Client"
-      - mkdir -p /opt/oracle
-      - mv instantclient_23_5 /opt/oracle/instantclient
-      - export LD_LIBRARY_PATH=/opt/oracle/instantclient:$LD_LIBRARY_PATH
       - echo "Navigating to RMD directory and printing current directory"
       - cd ../RMD && pwd && npm install
   build:
