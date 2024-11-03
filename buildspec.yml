@@ -2,13 +2,17 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install -g expo-cli
-      - cd API && npm install
-      - cd ../RMD && npm install
+      - echo "Navigating to API directory and printing current directory"
+      - cd API && pwd && npm install
+      - echo "Navigating to RMD directory and printing current directory"
+      - cd ../RMD && pwd && npm install
   build:
     commands:
-      - cd API && npm run build
-      - cd ../RMD && npx expo export:web  # Use this for building the web app for deployment
+      - echo "Building the API and printing current directory"
+      - cd API && pwd && npm run build
+      - echo "Building the RMD Expo project and printing current directory"
+      - cd ../RMD && pwd && npx expo export:web
+
   post_build:
     commands:
       - echo "API and Expo projects built successfully"
