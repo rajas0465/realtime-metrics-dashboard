@@ -3,17 +3,23 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Setting LD_LIBRARY_PATH for Oracle Instant Client"
-      - echo "Verifying LD_LIBRARY_PATH"
-      - echo $LD_LIBRARY_PATH
-      - export LD_LIBRARY_PATH=$CODEBUILD_SRC_DIR/instantclient_23_5
-      - echo "Verifying LD_LIBRARY_PATH"
-      - echo $LD_LIBRARY_PATH
+      - echo "Installing necessary dependencies on Amazon Linux"
+      - sudo yum install -y libaio unzip  # Install required packages
+      - echo "Downloading Oracle Instant Client"
+      - curl -O https://download.oracle.com/otn_software/linux/instantclient/instantclient-basic-linuxx64.zip
+      - echo "Unzipping Oracle Instant Client"
+      - sudo mkdir -p /opt/oracle
+      - sudo unzip instantclient-basic-linuxx64.zip -d /opt/oracle/instantclient
+      - echo "Setting LD_LIBRARY_PATH"
+      - export LD_LIBRARY_PATH=/opt/oracle/instantclient/instantclient-basic-linuxx64
+      - echo "Installing npm dependencies"
       - cd $CODEBUILD_SRC_DIR/API && npm install
   build:
     commands:
+      - echo "Verifying LD_LIBRARY_PATH"
+      - echo $LD_LIBRARY_PATH
       - echo "Building the project"
       - cd $CODEBUILD_SRC_DIR/API && npm run build
   post_build:
     commands:
-      - echo "Build phase completed"
+      - echo "Build and setup completed successfully"
