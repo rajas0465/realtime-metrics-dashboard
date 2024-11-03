@@ -1,22 +1,15 @@
 version: 0.2
+
 phases:
   install:
     commands:
-      - echo "Navigating to API directory and printing current directory"
-      - cd API && pwd && npm install
-      - echo "Navigating to RMD directory and printing current directory"
-      - cd ../RMD && pwd && npm install
+      - echo "Setting LD_LIBRARY_PATH for Oracle Instant Client"
+      - export LD_LIBRARY_PATH=$CODEBUILD_SRC_DIR/instantclient_23_5:$LD_LIBRARY_PATH
+      - cd $CODEBUILD_SRC_DIR/API && npm install
   build:
     commands:
-      - echo "Building the API and printing current directory"
-      - cd  ../API && pwd && npm run build
-      - echo "Building the RMD Expo project and printing current directory"
-      - cd  ../RMD && pwd && npx expo export:web
-
+      - echo "Building the project"
+      - cd $CODEBUILD_SRC_DIR/API && npm run build
   post_build:
     commands:
-      - echo "API and Expo projects built successfully"
-artifacts:
-  files:
-    - API/**/*  # Adjust as needed to include built files
-    - RMD/**/*  # Adjust as needed to include built files
+      - echo "Build phase completed"
