@@ -10,8 +10,9 @@ phases:
       - echo "Unzipping Oracle Instant Client"
       - sudo mkdir -p /opt/oracle
       - sudo unzip instantclient-basic-linuxx64.zip -d /opt/oracle/instantclient
+      - ls
       - echo "Setting LD_LIBRARY_PATH"
-      - export LD_LIBRARY_PATH=/opt/oracle/instantclient/instantclient-basic-linuxx64
+      - export LD_LIBRARY_PATH=/opt/oracle/instantclient/
       - echo "Installing npm dependencies"
       - cd $CODEBUILD_SRC_DIR/API && npm install
   build:
