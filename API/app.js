@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 AWS.config.update({ region: 'ap-south-1' });
 const cloudwatch = new AWS.CloudWatch();
 
-oracledb.initOracleClient({ libDir: '../instantclient_23_5' }); // Optional if using Oracle Instant Client
+oracledb.initOracleClient({ libDir: '..//instantclient_23_5' }); // Optional if using Oracle Instant Client
 
 // Database connection configuration
 const dbConfig = {
@@ -56,7 +56,7 @@ async function getCPUUtilization(dbInstanceId) {
     }
 }
 
-app.get('/db/info', async (req, res) => {
+app.get('/db/infoDB', async (req, res) => {
     let connection;
     try {
         // Establish a connection to the Oracle database
@@ -221,7 +221,7 @@ app.get('/db/info-table', async (req, res) => {
     }
 });
 const rds = new AWS.RDS();
-app.get('/db/info', async (req, res) => {
+app.get('/db/infoCloudwatch', async (req, res) => {
     try {
         // Replace 'your-db-instance-identifier' with your actual RDS DB instance identifier
         const dbInstanceIdentifier = 'oracleawsrdsdb';
