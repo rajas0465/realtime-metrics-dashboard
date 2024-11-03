@@ -5,7 +5,7 @@ phases:
       - echo "Navigating to API directory and printing current directory"
       - cd API && pwd && npm install
       - echo "downloading Oracle Instant Client from s3"
-      - aws s3 cp s3://oracleclient23/instantclient-basiclite-windows.zip
+      - aws s3 cp s3://oracleclient23/instantclient-basiclite-windows.zip .
       - unzip instantclient-basiclite-windows.zip
       - echo "installing Oracle Client"
       - mkdir -p /opt/oracle
