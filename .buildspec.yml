@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install -g expo-cli
+      - cd API && npm install
+      - cd ../realtime-metrics-dashboard && npm install
+  build:
+    commands:
+      - cd API && npm run build
+      - cd ../realtime-metrics-dashboard && expo build:web  # Use this for building the web app for deployment
+  post_build:
+    commands:
+      - echo "API and Expo projects built successfully"
+artifacts:
+  files:
+    - API/**/*  # Adjust as needed to include built files
+    - realtime-metrics-dashboard/**/*  # Adjust as needed to include built files
