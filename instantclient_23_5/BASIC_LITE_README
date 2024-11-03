@@ -1,13 +1,14 @@
-Basic Light Package Information 
-=============================== 
-Sun Aug 11 11:45:05 PDT 2024
+Basic Light Package Information
+===========-===================
+
+Wed Jul 10 23:02:06 UTC 2024
+
 Client Shared Library 64-bit - 23.5.0.24.07
 
-Microsoft Windows Server 2022 Standard Version V10.0  OS Build 20348
-CPU                 : 4 - type 86642 physical cores
-Process Affinity    : 0x0000000000000000
-Memory (Avail/Total): Ph:29608M/32767M, Ph+PgF:34408M/37631M 
-
+System name:	Linux
+Release:	5.4.17-2136.327.2.el8uek.x86_64
+Version:	#2 SMP Fri Jan 5 14:55:52 PST 2024
+Machine:	x86_64
 
 TIMEZONE INFORMATION
 --------------------

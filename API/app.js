@@ -56,6 +56,51 @@ async function getCPUUtilization(dbInstanceId) {
     }
 }
 
+app.get('/db/info', async (req, res) => {
+    let connection;
+    try {
+        // Establish a connection to the Oracle database
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Execute the query to get database instance details
+        const dbInfoResult = await connection.execute(
+            `SELECT 
+                instance_name, 
+                version, 
+                host_name, 
+                startup_time, 
+                status, 
+                database_status 
+             FROM 
+                v$instance`
+        );
+
+        // Extract the column names and data
+        const dbInfo = dbInfoResult.rows.map(row => ({
+            instanceName: row[0],
+            version: row[1],
+            hostName: row[2],
+            startupTime: row[3],
+            status: row[4],
+            databaseStatus: row[5],
+        }));
+
+        // Send the response as JSON
+        res.status(200).json({ dbInfo });
+    } catch (error) {
+        console.error('Error performing database operation:', error);
+        res.status(500).json({ error: 'Database operation failed', details: error.message });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeError) {
+                console.error('Error closing the connection:', closeError);
+            }
+        }
+    }
+});
+
 app.get('/db/details', async (req, res) => {
     let connection;
     try {
