@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: API/
+    destination: /var/www/api  # Adjust the path
+  - source: RMD/
+    destination: /var/www/rmd  # Adjust the path
+hooks:
+  AfterInstall:
+    - location: scripts/install_api.sh
+      timeout: 300
+      runas: root
+    - location: scripts/install_expo.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_api.sh
+      timeout: 300
+      runas: root
+    - location: scripts/start_expo.sh
+      timeout: 300
+      runas: root
