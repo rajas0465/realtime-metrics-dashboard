@@ -6,6 +6,12 @@ files:
   - source: RMD/
     destination: /var/www/rmd  # Adjust the path as needed
 hooks:
+  ApplicationInstall:
+    - location: scripts/install_api_dependencies.sh
+      timeout: 300
+      runas: root
+    - location: scripts/install_expo_dependencies.sh
+      timeout: 300
   ApplicationStart:
     - location: scripts/start_api.sh
       timeout: 300
