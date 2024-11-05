@@ -1,5 +1,7 @@
 #!/bin/bash
 
+service httpd start
+
 # Navigate to the API directory
 cd /var/www/api  # Adjust the path as needed
 
