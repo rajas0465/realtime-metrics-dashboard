@@ -9,4 +9,4 @@ sudo chmod +x /var/www/rmd/node_modules/.bin/expo
 pm2 start "npx expo start" --name "expo-app"
 
 # Save the PM2 process list to ensure it restarts on reboot
-pm2 save
+#pm2 save

@@ -7,4 +7,4 @@ cd /var/www/api  # Adjust the path as needed
 pm2 start app.js --name "api-server"  # Replace 'server.js' with your API entry point file
 
 # Save the PM2 process list to ensure it restarts on reboot
-pm2 save
+#pm2 save
