@@ -5,8 +5,6 @@ files:
     destination: /var/www/api  # Adjust the path as needed
   - source: RMD/
     destination: /var/www/rmd  # Adjust the path as needed
-  - source: instantclient_23_5/
-    destination: /var/www/instantclient_23_5
 hooks:
   ApplicationInstall:
     - location: scripts/install_api_dependencies.sh
