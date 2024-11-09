@@ -3,6 +3,7 @@
 # Navigate to the API directory
 cd /var/www/api  # Adjust the path as needed
 
+pm2 stop "api"
 # Start the API using pm2
 pm2 start app.js --name "api"  # Replace 'server.js' with your API entry point file
 

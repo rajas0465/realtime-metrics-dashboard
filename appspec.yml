@@ -3,6 +3,8 @@ os: linux
 files:
   - source: API/
     destination: /var/www/api  # Adjust the path as needed
+  - source: RMD/
+    destination: /var/www/rmd
 hooks:
   ApplicationInstall:
     - location: scripts/install_api_dependencies.sh
