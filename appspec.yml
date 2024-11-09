@@ -15,7 +15,7 @@ hooks:
   ApplicationStart:
     - location: scripts/start_api.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
     - location: scripts/start_expo.sh
       timeout: 300
       runas: root
