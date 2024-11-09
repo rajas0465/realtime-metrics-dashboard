@@ -261,7 +261,7 @@ const ec2 = new AWS.EC2();
 app.get('/webserver1/info', async (req, res) => {
     try {
         // Replace 'your-instance-id' with your actual EC2 instance ID
-        const instanceId = 'i-0929e935d767da4fd'; // Replace with your actual EC2 instance ID
+        const instanceId = 'i-0352d4e0ca4d408fc'; // Replace with your actual EC2 instance ID
         const params = {
             InstanceIds: [instanceId]
         };
@@ -296,7 +296,7 @@ app.get('/webserver1/info', async (req, res) => {
 app.get('/webserver2/info', async (req, res) => {
     try {
         // Replace 'your-instance-id' with your actual EC2 instance ID
-        const instanceId = 'i-07c47d7d67e71a95c'; // Replace with your actual EC2 instance ID
+        const instanceId = 'i-0fced6cdd731bac08'; // Replace with your actual EC2 instance ID
         const params = {
             InstanceIds: [instanceId]
         };
@@ -331,7 +331,7 @@ app.get('/webserver2/info', async (req, res) => {
 app.get('/metrics/overview1', async (req, res) => {
     try {
 
-        var instanceID = 'i-0929e935d767da4fd';
+        var instanceID = 'i-0352d4e0ca4d408fc';
         // Simulate data fetching from AWS CloudWatch or DynamoDB
         const cpuData = await fetchMetricData('CPUUtilization', instanceID);
 
@@ -361,7 +361,7 @@ app.get('/metrics/overview1', async (req, res) => {
 app.get('/metrics/overview2', async (req, res) => {
     try {
 
-        var instanceID = 'i-07c47d7d67e71a95c';
+        var instanceID = 'i-0fced6cdd731bac08';
         // Simulate data fetching from AWS CloudWatch or DynamoDB
         const cpuData = await fetchMetricData('CPUUtilization', instanceID);
 
