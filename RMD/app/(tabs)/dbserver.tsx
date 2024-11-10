@@ -17,11 +17,11 @@ const ServerMetricsScreen: React.FC = () => {
     const fetchData = async () => {
       try {
         // Fetching metrics data
-        const response = await axios.get('http://localhost:3000/db/overview');
+        const response = await axios.get('http://65.0.178.77:3000/db/overview');
         setData(response.data);
 
         // Fetching basic server/database information
-        const infoResponse = await axios.get('http://localhost:3000/db/info');
+        const infoResponse = await axios.get('http://65.0.178.77:3000/db/info');
         setServerInfo(infoResponse.data);
 
         setLoading(false);

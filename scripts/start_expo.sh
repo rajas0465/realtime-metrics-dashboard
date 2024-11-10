@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the Expo project directory
-cd /var/www/rmd  # Adjust the path as needed
+#cd /var/www/rmd  # Adjust the path as needed
 
 # Start the Expo app using pm2 with Expo CLI
 #pm2 start "npx expo start" --name "expo-app3"
