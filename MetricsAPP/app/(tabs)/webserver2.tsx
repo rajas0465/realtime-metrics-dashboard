@@ -70,7 +70,7 @@ const ServerMetricsScreen: React.FC = () => {
     <ScrollView style={styles.container}>
             {/* Enhanced Basic Information Section */}
             <View style={styles.infoCard}>
-            <Text style={styles.infoTitle}>EC2 Instance Information</Text>
+            <Text style={styles.infoTitle}>EC2 Instance Information(BackendServer)</Text>
             <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Instance ID:</Text>
                 <Text style={styles.infoValue}>{serverInfo.instanceId || 'N/A'}</Text>

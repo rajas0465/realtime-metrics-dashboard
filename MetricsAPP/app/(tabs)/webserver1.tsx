@@ -71,7 +71,7 @@ const ServerMetricsScreen: React.FC = () => {
 
             {/* Enhanced Basic Information Section */}
             <View style={styles.infoCard}>
-            <Text style={styles.infoTitle}>EC2 Instance Information</Text>
+            <Text style={styles.infoTitle}>App Service Instance Information</Text>
             <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Instance ID:</Text>
                 <Text style={styles.infoValue}>{serverInfo.instanceId || 'N/A'}</Text>
