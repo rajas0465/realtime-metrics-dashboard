@@ -540,5 +540,5 @@ async function fetchNetworkPacketsData(instanceId) {
 // Similar functions for memory, disk, iops, network, and response time would be implemented here...
 
 app.listen(PORT,'0.0.0.0', () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Please check Server running on http://localhost:${PORT}`);
 });
